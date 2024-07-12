@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reproductor de música</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #108639;
+                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+    
+            #container {
+                text-align: center;
+            }
+
+            #logoCancion {
+            width: 300px; /* Ancho de la imagen */
+            height: auto; /* Altura automática para mantener la proporción */
+            margin-right: 30px;
+            border-radius: 20%; /* Hacer el logo redondo */
+        }
+
+        </style>
+    </head>
+<body style="background-color: #108639; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #fff;"> <!-- Color verde de Spotify y estilos de letra -->
+    <div id="container">
+        <div id="reproductor">
+            <div id="infoCancion">
+                <img id="logoCancion" src="imagenes/puño.jpg" alt="Logo de la canción">
+                <div id="infoText">
+                    <h2 id="PuñodeDiamantes" style="font-size: 22px; font-weight: bold;">Puño de Diamantes</h2> <!-- Nombre de la canción -->
+                    <p id="NatanaelCano" style="color: #b3b3b3;">Natanael Cano</p> <!-- Artista -->
+                </div>
+            </div>
+            <button id="btnVerLetra" style="background-color: #1db95400; color: #fff; border: none; border-radius: 40px; cursor: pointer; padding: 12px 30px; transition: background-color 0.3s ease;">Ver letra</button> <!-- Estilos del botón -->
+        </div>
+
+        <div id="letraContainer" style="display: none;"> <!-- Ocultar el contenedor de letra por defecto -->
+            <h3 style="color: #fff;">Letra de la canción</h3> <!-- Color de letra para el título de la letra -->
+            <p id="letra" style="font-size: 16px; line-height: 1.6; white-space: pre-line;"></p> <!-- Estilos de letra para la letra de la canción -->
+        </div>
+    </div>
+
+    <audio id="audioPlayer" controls>
+        <source src="musica/Y2meta.app - natanael cano - puño de diamantes IA (LETRA) (320 kbps).mp3" type="audio/mpeg"> <!-- Ruta de tu canción -->
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <button id="btnOtraCancion" style="background-color: #1db95400; color: #fff; border: none; border-radius: 40px; cursor: pointer; padding: 12px 30px; transition: background-color 0.3s ease;">Reproducir otra canción</button>
+    <div id="container">
+        <div id="reproductor">
+            <div id="infoCancion">
+                <img id="logoCancion" src="imagenes/o me voy.jpg" alt="Logo de la canción">
+                <div id="infoText">
+                    <h2 id="nombreCancion" style="font-size: 22px; font-weight: bold;">O me voy o te vas</h2>
+                    <p id="nombreArtista" style="color: #b3b3b3;">Natanael Cano</p>
+                </div>
+            </div>
+            <button id="btnVerLetra" style="background-color: #1db95400; color: #fff; border: none; border-radius: 40px; cursor: pointer; padding: 12px 30px; transition: background-color 0.3s ease;">Ver letra</button>
+        </div>
+    
+        <div id="letraContainer" style="display: none;">
+            <h3 style="color: #fff;">Letra de la canción</h3>
+            <p id="letra" style="font-size: 16px; line-height: 1.6; white-space: pre-line;"></p>
+        </div>
+    </div>
+    
+    <audio id="audioPlayer" controls>
+        <source src="musica/Y2meta.app - Natanael Cano - O Me Voy O Te Vas [Official Video] (320 kbps).mp3" type="audio/mpeg"> <!-- Ruta de tu canción -->
+        <source id="audioSource" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+    
+    <script src="script.js"></script> <!-- Archivo JavaScript para la funcionalidad -->
+</body>
+</html>
